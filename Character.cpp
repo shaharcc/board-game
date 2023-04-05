@@ -3,7 +3,7 @@
 #include "Game.h"
 #include "Exceptions.h"
 
-using namespace std;
+using namespace game_ns;
 
 Character& Character::operator=(const Character& other) {
     if(this == &other)
