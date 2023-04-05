@@ -7,10 +7,8 @@
 #include <cassert>
 #include "Auxiliaries.h"
 
-namespace mtm
-{
-    class Character
-    {
+namespace game_ns {
+    class Character {
     protected:
         units_t health, ammo, range, power;
         Team team;
@@ -42,8 +40,6 @@ namespace mtm
                                 const GridPoint & dst_coordinates, int attacker_position, int attacked_postion,
                                 std::shared_ptr<Character> attacked) = 0; 
     };
-
 }
 
 #endif //CHARACTER_H
-
