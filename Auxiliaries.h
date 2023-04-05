@@ -6,7 +6,7 @@
 
 #include <cmath>
 
-namespace mtm {
+namespace game_ns {
     enum Team {
         POWERLIFTERS, CROSSFITTERS
     };
