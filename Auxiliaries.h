@@ -1,5 +1,5 @@
-#ifndef HW3_AUXILIARIES_H
-#define HW3_AUXILIARIES_H
+#ifndef _AUXILIARIES_H
+#define _AUXILIARIES_H
 
 #include <iostream>
 #include <string>
