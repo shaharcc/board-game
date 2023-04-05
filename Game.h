@@ -13,9 +13,8 @@ using std::endl;
 using std::string;
 using std::ostream;
 
-namespace mtm{
-    class Game
-    {
+namespace game_ns {
+    class Game {
         int height;
         int width;
         std::vector<std::shared_ptr<Character>> board;
