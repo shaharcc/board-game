@@ -5,35 +5,30 @@
 #include "Auxiliaries.h"
 #include "Exceptions.h"
 
-using namespace mtm;
+using namespace game_ns;
 
-void Sniper::reloadAmmo()
-{
+void Sniper::reloadAmmo() {
     this->ammo += 2;
 }
 
-bool Sniper::isRangeLegal(int num_of_steps)
-{
+bool Sniper::isRangeLegal(int num_of_steps) {
     if (num_of_steps <= this->range && num_of_steps >= ceil((this->range)/2)){
         return true;
     }
     return false;
 } 
 
-//can attack anywhere
-bool Sniper::isDirectionLegal(const GridPoint & src_coordinates, const GridPoint & dst_coordinates)
-{
+// can attack anywhere
+bool Sniper::isDirectionLegal(const GridPoint & src_coordinates, const GridPoint & dst_coordinates) {
     return true;
 }
 
-Sniper* Sniper::clone() const
-{
+Sniper* Sniper::clone() const {
     return new Sniper(*this);
 }
 
 void Sniper::makeAttack(std::vector<std::shared_ptr<Character>> board, const GridPoint & src_coordinates,
-                        const GridPoint & dst_coordinates, int attacker_position, int attacked_postion, std::shared_ptr<Character> attacked)
-{
+                        const GridPoint & dst_coordinates, int attacker_position, int attacked_postion, std::shared_ptr<Character> attacked) {
   
     if (this->team != attacked->getTeam()){
         throw IllegalTarget();
@@ -49,22 +44,17 @@ void Sniper::makeAttack(std::vector<std::shared_ptr<Character>> board, const Gri
         }
         attack_counter = 0; 
     }
-
     else {
         attacked->updateHealth(-1*(this->power));
         if (attacked->getHealth() == 0) {
             attacked = nullptr;
-            //board.erase(attacked_postion); // not good
         }
     }
 }
 
-std::string Sniper::getSymbol()
-{
+std::string Sniper::getSymbol() {
     if(this->team == CROSSFITTERS)
         return "s";
     else 
         return "S";
 }
-
-    
