@@ -14,7 +14,8 @@ using std::string;
 using std::ostream;
 
 namespace game_ns {
-    class Game {
+    class Game
+    {
         int height;
         int width;
         std::vector<std::shared_ptr<Character>> board;
