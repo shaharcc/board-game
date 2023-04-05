@@ -3,10 +3,9 @@
 #include "Game.h"
 #include "Exceptions.h"
 
-using namespace mtm;
+using namespace std;
 
-Character& Character::operator=(const Character& other)
-{
+Character& Character::operator=(const Character& other) {
     if(this == &other)
         return *this;
     
@@ -19,52 +18,41 @@ Character& Character::operator=(const Character& other)
     return *this;
 }
 
-bool Character::isMoveLegal(int num_of_steps)
-{
+bool Character::isMoveLegal(int num_of_steps) {
     if (num_of_steps <= this->range){
         return true;
     }
     return false;
 }
 
-bool Character::outOfAmmo()
-{
+bool Character::outOfAmmo() {
     return (this->ammo == 0);
 }
 
-void Character::updateHealth(int n)
-{
+void Character::updateHealth(int n) {
     this->health += n; 
 }  
 
-units_t Character::getHealth()
-{
+units_t Character::getHealth() {
     return this->health; 
 }
 
-Team Character::getTeam()
-{
+Team Character::getTeam() {
     return this->team;
 }
-units_t Character::getRange()
-{
+
+units_t Character::getRange() {
     return this->range;
 }
 
-units_t Character::getPower()
-{
+units_t Character::getPower() {
     return this->power;
 }
 
-units_t Character::getAmmo()
-{
+units_t Character::getAmmo() {
     return this->ammo;
 }
 
-void Character::reduceAmmo(int n)
-{
+void Character::reduceAmmo(int n) {
     this->ammo -= n;
 }
-
-
-
