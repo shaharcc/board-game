@@ -3,10 +3,7 @@
 #include "Character.h"
 #include "Auxiliaries.h"
 
-
-namespace mtm
-{
-    
+namespace game_ns {
     class Soldier : public Character
     {
         public:
