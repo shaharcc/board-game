@@ -1,6 +1,6 @@
 #include "Auxiliaries.h"
 
-std::ostream &mtm::printGameBoard(std::ostream &os, const char *begin,
+std::ostream &game_ns::printGameBoard(std::ostream &os, const char *begin,
                                  const char *end, unsigned int width) {
     std::string delimiter = std::string(2 * width + 1, '*');
     const char *temp = begin;
