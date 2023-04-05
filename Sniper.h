@@ -2,9 +2,8 @@
 #include <memory>
 #include "Character.h"
 #include "Auxiliaries.h"
-namespace mtm
-{
 
+namespace game_ns {
     class Sniper : public Character
     {
         int attack_counter;
