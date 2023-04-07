@@ -1,4 +1,4 @@
-# board-game
+# Board Game
 
 A basic board game between two teams- the Crossfitters and the Powerlifters.
 Each team can use soldier, medic and sniper characters.
